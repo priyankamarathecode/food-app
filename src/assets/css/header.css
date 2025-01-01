@@ -1,0 +1,127 @@
+/* header.css */
+
+/* Basic styling for the header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff; /* White background */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo-container .logo {
+  height: 90px;
+}
+
+.nav-items ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-items ul li {
+  display: flex;
+  align-items: center;
+}
+
+.nav-items ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-items ul li a:hover {
+  color: #ff4f5a; /* Hover effect */
+}
+
+.login {
+  border-radius: 18px;
+  padding: 10px 20px;
+  border: 1px #ff4f5a solid;
+  background-color: #ffffff;
+  color: #000000;
+  cursor: pointer;
+}
+
+.login:hover {
+  color: white;
+  background-color: #e65100;
+}
+
+/* Hamburger menu icon for mobile */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Close menu icon (X) for mobile */
+.close-menu {
+  display: none;
+  font-size: 30px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .nav-items {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background-color: white;
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    z-index: 100;
+  }
+
+  .nav-items.open {
+    display: flex;
+  }
+
+  /* Hamburger icon for mobile - only visible when menu is closed */
+  .hamburger {
+    display: block;
+  }
+
+  /* Close icon for mobile - only visible when menu is open */
+  .close-menu {
+    display: block;
+  }
+
+  .nav-items ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-items ul li {
+    font-size: 18px;
+  }
+
+  .cart-link a {
+    font-size: 18px;
+  }
+}
+
+/* Add padding for the body when menu is open (optional) */
+body.menu-open {
+  overflow: hidden;
+}

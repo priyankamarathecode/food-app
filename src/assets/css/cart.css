@@ -1,0 +1,288 @@
+/* General Page Styling */
+.cart-page {
+  margin: 15px auto;
+  width: 90%; /* Adjust width for smaller screens */
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 30px;
+  background-color: #f7f8fa;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+/* Left Section (Account, Delivery, Payment) */
+.cart-left {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.cart-left h2,
+.cart-left h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.cart-left p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.account-buttons button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.account-buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+.account-buttons a {
+  border-radius: 4px;
+  color: white;
+  background: #ff4f5a;
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.delivery-section,
+.payment-section {
+  margin-top: 20px;
+}
+
+.delivery-section textarea {
+  width: 100%;
+  height: 80px;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  resize: none;
+}
+
+.delivery-section textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Right Section (Order Summary) */
+.cart-right {
+  flex: 2;
+  min-width: 300px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.cart-items h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.cart-items p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.opt-in-delivery {
+  background-color: #f9f9f9;
+  border: 1px dashed #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.opt-in-delivery input {
+  margin-right: 10px;
+}
+
+.opt-in-delivery label {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Bill Summary Section */
+.order-summary {
+  margin-top: 20px;
+}
+
+.order-summary h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.bill-details {
+  display: grid;
+  gap: 8px;
+}
+
+.bill-details p {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  color: #555;
+}
+
+.bill-details h4 {
+  font-size: 1.2rem;
+  color: #007bff;
+  font-weight: 700;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Pay Button */
+.pay-btn {
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.payment-success {
+  margin-top: 20px;
+  background-color: #e7f9ed;
+  color: #28a745;
+  border: 1px solid #28a745;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .cart-page {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .cart-left,
+  .cart-right {
+    max-width: 100%;
+    flex: 1;
+  }
+
+  .order-summary h3 {
+    font-size: 1.1rem;
+  }
+
+  .order-summary h4 {
+    font-size: 1rem;
+  }
+
+  .pay-btn {
+    padding: 12px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cart-page {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cart-left,
+  .cart-right {
+    max-width: 100%;
+    flex: 1;
+  }
+
+  .cart-left h2,
+  .cart-left h3 {
+    font-size: 1.2rem;
+  }
+
+  .cart-items h2 {
+    font-size: 1.2rem;
+  }
+
+  .opt-in-delivery input,
+  .opt-in-delivery label {
+    font-size: 0.85rem;
+  }
+
+  .pay-btn {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+
+  .bill-details p {
+    font-size: 0.9rem;
+  }
+
+  .order-summary h3 {
+    font-size: 1rem;
+  }
+
+  .order-summary h4 {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cart-page {
+    padding: 15px;
+  }
+
+  .cart-left h2,
+  .cart-left h3 {
+    font-size: 1.1rem;
+  }
+
+  .cart-items h2 {
+    font-size: 1.1rem;
+  }
+
+  .order-summary h3 {
+    font-size: 1rem;
+  }
+
+  .bill-details p {
+    font-size: 0.85rem;
+  }
+
+  .pay-btn {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}

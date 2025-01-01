@@ -1,0 +1,102 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  padding: 20px;
+}
+
+/* Filter and Search Bar */
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-box {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 250px;
+  font-size: 14px;
+}
+
+.search-btn {
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Search Box Focus */
+.search-box:focus {
+  outline: none; /* Remove default outline */
+  border-color: #007bff; /* Change border color to blue */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a subtle glow effect */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.filter-btn {
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Restaurant Cards */
+.res-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.no-records {
+  color: #777;
+  font-size: 18px;
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .search-box {
+    width: 200px;
+  }
+
+  .search-btn,
+  .filter-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-box {
+    width: 150px;
+  }
+
+  .search-btn,
+  .filter-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}

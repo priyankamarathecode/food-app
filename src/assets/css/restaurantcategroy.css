@@ -1,0 +1,245 @@
+/* General Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+/* Category Card Container */
+.category-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  max-width: 600px;
+  margin: 15px auto; /* Align center */
+}
+
+/* Hover Effect */
+.category-card:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+}
+
+/* Category Header */
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  padding: 10px 0;
+}
+
+.category-header .toggle-icon {
+  font-size: 22px;
+  color: #007bff;
+  transition: transform 0.3s ease-in-out;
+}
+
+.category-header:hover .toggle-icon {
+  transform: scale(1.2);
+}
+
+/* Open/Close Transition for Accordion */
+.category-header .toggle-icon.open {
+  transform: rotate(180deg); /* Rotate arrow when expanded */
+}
+
+/* Collapsible Content for Accordion */
+.category-content {
+  display: none; /* Hidden by default */
+  padding: 15px 0;
+  border-top: 1px solid #eee;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.category-content.show {
+  display: block; /* Show when toggled */
+}
+
+/* Item List */
+.item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px;
+}
+
+/* Individual Item */
+.item {
+  display: flex;
+  flex-direction: column;
+  background-color: #fdfdfd;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* Item Header */
+.item-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.item-header img {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.item-name {
+  flex: 1;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.item-price {
+  font-size: 16px;
+  color: #28a745;
+  font-weight: bold;
+}
+
+/* Item Description */
+.item-description {
+  font-size: 14px;
+  color: #777;
+  margin: 10px 0;
+  font-style: italic;
+}
+
+/* Add Button */
+button {
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Quantity Buttons */
+.item-quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.quantity-btn {
+  background-color: #f57224;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.quantity-btn:hover {
+  background-color: #d65a1f;
+}
+
+.quantity-btn:active {
+  transform: scale(0.95);
+}
+
+.quantity-count {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .category-card {
+    padding: 12px;
+    font-size: 18px;
+  }
+
+  .item-header img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .item-name {
+    font-size: 16px;
+  }
+
+  .item-price {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .quantity-btn {
+    font-size: 16px;
+    padding: 4px 8px;
+  }
+
+  .quantity-count {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-card {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .item-header img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .item-name {
+    font-size: 14px;
+  }
+
+  .item-price {
+    font-size: 12px;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .quantity-btn {
+    font-size: 14px;
+    padding: 3px 6px;
+  }
+
+  .quantity-count {
+    font-size: 12px;
+  }
+}
+
+/* Keyframe Animation for Accordion Content */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,185 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Add this to your CSS (e.g., restaurant.css) */
+.res-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.restaurant-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.restaurant-image {
+  width: 100%;
+  max-width: 400px; /* Adjust this based on the image size you want */
+  height: auto;
+  border-radius: 8px; /* Optional: Adds rounded corners to the image */
+  margin-bottom: 15px;
+}
+
+.restaurant-details h1 {
+  margin: 5px 0;
+  font-size: 24px;
+}
+
+.restaurant-details h1:nth-child(2) {
+  font-size: 18px;
+  color: #555; /* Light gray for the second h1 (cuisines and costForTwoMessage) */
+}
+
+@media (min-width: 768px) {
+  .restaurant-details h1 {
+    font-size: 28px; /* Larger font size on larger screens */
+  }
+}
+
+.res-container {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center; /* Centering the content */
+  gap: 20px; /* Space between cards */
+}
+
+.res-container a {
+  text-decoration: none;
+}
+
+.restaurant-card {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  margin: 20px;
+  border: 1px solid #f2f2f2;
+  transform: translateY(0);
+}
+
+/* Image */
+.restaurant-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 4px solid #f1f1f1;
+  border-radius: 12px 12px 0 0; /* Rounded top corners */
+  transition: all 0.3s ease;
+}
+
+.restaurant-card:hover .restaurant-image {
+  opacity: 0.8;
+}
+
+/* Card Content */
+.restaurant-info {
+  padding: 20px;
+  /* background-color: #fff; */
+}
+
+.restaurant-name {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+  text-transform: capitalize;
+}
+
+.restaurant-cuisines {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 20px;
+  font-style: italic;
+  text-decoration: none; /* Removes underline */
+}
+
+.restaurant-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #555;
+}
+
+.restaurant-rating {
+  color: #ff9800;
+  font-weight: bold;
+}
+
+.restaurant-cost,
+.restaurant-delivery-time {
+  color: #333;
+  font-weight: bold;
+}
+
+/* Icon Styles */
+.restaurant-rating:before {
+  content: "⭐";
+  margin-right: 4px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .restaurant-card {
+    width: 250px;
+    margin: 15px;
+  }
+
+  .restaurant-name {
+    font-size: 20px;
+  }
+
+  .restaurant-cuisines {
+    font-size: 12px;
+  }
+
+  .restaurant-details {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .restaurant-card {
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  .restaurant-image {
+    height: 150px;
+  }
+
+  .restaurant-name {
+    font-size: 18px;
+  }
+
+  .restaurant-cuisines {
+    font-size: 12px;
+  }
+
+  .restaurant-details {
+    font-size: 12px;
+  }
+}
+
+.restaurant-card .restaurant-info {
+  transition: all 0.3s ease;
+}
+
+.restaurant-card:hover .restaurant-info {
+  background-color: #f8f8f8; /* Light background for the card details */
+}

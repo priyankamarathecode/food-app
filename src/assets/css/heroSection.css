@@ -1,0 +1,153 @@
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 70vh; /* Adjust based on desired height */
+  /* background-image: url("https://img.freepik.com/free-photo/top-view-baked-potatoes-with-minced-meat-greens-inside-plate-dark-blue-desk_140725-49966.jpg?ga=GA1.1.1413328600.1729438972&semt=ais_hybrid"); */
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px; /* Rounded corners */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 5%;
+}
+
+.overlay {
+  border-radius: 17px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+.view-menu-btn {
+  background-color: #ff4f5a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-menu-btn:hover {
+  background-color: #e04350;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+
+/* Features Section */
+.features-section {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.features-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.features-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 370px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+  font-size: 40px;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.feature-card h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .feature-card {
+    width: 200px;
+    padding: 15px;
+  }
+
+  .feature-icon {
+    font-size: 35px;
+  }
+
+  .features-section h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .feature-card {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .features-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .features-section h2 {
+    font-size: 22px;
+  }
+}
