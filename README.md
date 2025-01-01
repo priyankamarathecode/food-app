@@ -37,10 +37,3 @@ Installation
 4. Run the application:
    npm start
    This will launch the application on http://localhost:3000.
-
-Usage
-Once the application is running:
-
--Home Page: Displays a list of nearby restaurants.
--Restaurant Menu: Shows menu items for each restaurant.
--Cart: Users can add items to their cart, view the cart count, and modify orders.
