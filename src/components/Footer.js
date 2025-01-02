@@ -19,7 +19,7 @@ const Footer = () => {
           <FaLinkedin />
         </a>
         <a
-          href="https://github.com/your-github"
+          href="https://github.com/priyankamarathecode/food-app"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub"
