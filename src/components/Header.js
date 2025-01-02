@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { LOGO_URL } from "../utils/constants";
+import LOGO_URL from "../assets/images/fastfoodhub.png";
 import { Link } from "react-router-dom";
 import UserContext from "../utils/UserContext";
 import { useSelector } from "react-redux";
