@@ -6,18 +6,7 @@ const DataFetcher = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Using CORS proxy to avoid CORS error
-        const proxyUrl = "https://cors-anywhere.herokuapp.com/";
-        const targetUrl =
-          "https://www.swiggy.com/dapi/restaurants/list/v5?lat=16.8523973&lng=74.5814773&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
-
-        const response = await fetch(proxyUrl + targetUrl, {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
-
+        const response = await fetch("http://localhost:3001/api/restaurants");
         if (!response.ok) {
           throw new Error(
             `HTTP Error: ${response.status} ${response.statusText}`
@@ -25,7 +14,7 @@ const DataFetcher = () => {
         }
 
         const data = await response.json();
-        console.log(data); // Handle the data as needed
+        setRestaurants(data?.data?.cards ?? []); // Adjust the data path as needed
       } catch (error) {
         console.error("Error fetching data:", error);
       }

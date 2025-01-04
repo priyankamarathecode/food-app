@@ -61,7 +61,7 @@ const Body = () => {
           ?.restaurants
       );
 
-      console.log(json); // Optional: Log the response for debugging
+      // console.log(json);
       setLoading(false); // Set loading to false after data is fetched
     } catch (error) {
       console.error("Error fetching data:", error);

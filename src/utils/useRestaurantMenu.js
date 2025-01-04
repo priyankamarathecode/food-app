@@ -31,7 +31,7 @@ const useRestaurantMenu = (resId) => {
       setResInfo(json.data);
 
       // Optional: Log the response for debugging
-      console.log("All Full Menu:=", json);
+      // console.log("All Full Menu:=", json);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
