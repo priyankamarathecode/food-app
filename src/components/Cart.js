@@ -25,12 +25,10 @@ const Cart = () => {
   }, 0);
 
   const deliveryPartnerFee = cartItems.length > 0 ? 16 : 0;
-  const festiveSeasonFee = cartItems.length > 0 ? 8 : 0;
   const gstCharges = (itemTotal * 0.18).toFixed(2);
   const totalPayable = (
     itemTotal +
     deliveryPartnerFee +
-    festiveSeasonFee +
     parseFloat(gstCharges)
   ).toFixed(2);
 
@@ -87,7 +85,6 @@ const Cart = () => {
               <h3>Bill Details</h3>
               <p>Item Total: ₹{itemTotal.toFixed(2)}</p>
               <p>Delivery Partner Fee: ₹{deliveryPartnerFee}</p>
-              <p>Festive Season Fee: ₹{festiveSeasonFee}</p>
               <p>GST and Charges: ₹{gstCharges}</p>
               <h4>Total Payable: ₹{totalPayable}</h4>
             </div>

@@ -14,7 +14,6 @@ const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
   const { loggedInUser, setUserName } = useContext(UserContext);
-  const [loading, setLoading] = useState(true); // State to track loading
 
   // console.log("list of restuarntants", setListOfRestaurants);
 
@@ -27,46 +26,19 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    try {
-      setLoading(true); // Set loading to true before starting API call
+    const data = await fetch(
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=16.8523973&lng=74.5814773&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+    );
 
-      // Use CORS proxy to avoid CORS errors
-      const proxyUrl = "https://cors-anywhere.herokuapp.com/";
-      const targetUrl =
-        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=16.8523973&lng=74.5814773&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
+    const json = await data.json();
 
-      const response = await fetch(proxyUrl + targetUrl, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+    setListOfRestaurants(
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
 
-      if (!response.ok) {
-        throw new Error(
-          `HTTP Error: ${response.status} ${response.statusText}`
-        );
-      }
-
-      const json = await response.json();
-
-      // Set the restaurants in state
-      setListOfRestaurants(
-        json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-          ?.restaurants
-      );
-
-      setFilteredRestaurant(
-        json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-          ?.restaurants
-      );
-
-      // console.log(json);
-      setLoading(false); // Set loading to false after data is fetched
-    } catch (error) {
-      console.error("Error fetching data:", error);
-      setLoading(false); // In case of error, set loading to false
-    }
+    setFilteredRestaurant(
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
   };
 
   const onlineStatus = useOnlineStatus();
@@ -75,7 +47,7 @@ const Body = () => {
       <h1>Something went wrong !.. Please Check Internet Connection !!</h1>
     );
 
-  return loading ? (
+  return listOfRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
     <div className="body">

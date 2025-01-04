@@ -46,5 +46,10 @@
   "devDependencies": {
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17"
-  }
+  },
+  "description": "📌 Project Overview\r The Food App is a feature-rich food ordering web application inspired by platforms like Swiggy. It provides a seamless experience for users to browse restaurants, explore their menus, and place orders effortlessly. Designed with scalability, performance, and responsiveness in mind, this app is built using React and Redux Toolkit for efficient state management and enhanced user experience.",
+  "main": "server.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

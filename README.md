@@ -37,3 +37,10 @@ Installation
 4. Run the application:
    npm start
    This will launch the application on http://localhost:3000.
+
+🌐 Deployed Link
+The application is deployed and accessible at:
+https://fastfoodhub.vercel.app/
+
+Important Note
+If you face issues with API requests due to CORS restrictions, please install the Allow CORS: Access-Control-Allow-Origin Chrome extension.
